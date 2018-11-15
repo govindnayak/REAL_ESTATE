@@ -1,0 +1,80 @@
+<div class="topnav" ng-controller="loginController">
+  <img style="margin-left: 40px; margin-top: 5px" src="images/logo.png" height="60px" width="60px">
+  <a style="margin-top: 5px" ng-show="check()" href ng-click = "logout()"><br><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;LOGOUT</a>
+  <label style="margin-right: 750px; position: absolute" href="#/login">&nbsp;&nbsp;&nbsp;&nbsp;MAHIMA - REAL ESTATE MANAGEMENT PORTAL</label>
+</div>
+
+<div class="container">
+
+  <div class="wrapper" ng-controller="dashController">
+
+
+      <form class="form-signin" ng-submit = "redirect()" ref='uploadForm' id='uploadForm'
+      action='http://localhost:4000/uploadproperty' method='post' encType="multipart/form-data">
+        <h5><i class="fa fa-building" aria-hidden="true"></i>&nbsp;&nbsp;UPLOAD PROPERTY</h5></br>
+
+      <select  class="form-control" name="type" style="width: 150px; position: absolute;">
+        <option  class="form-control" value="home" selected>Home</option>
+        <option class="form-control" value="land">Land</option>
+      </select>
+
+      <input style="width: 200px; display: inline-block; float: right;" placeholder = " ₹ Price" class="form-control" type="text" name="price" required><br><br><br>
+
+      <input placeholder = " Location" class="form-control" type="text" name="location" required>
+      <br/>
+      <input placeholder = " Address" class="form-control" type="text" name="address" required>
+      <br/>
+
+      <label  for="image">Image of your property</label><br/>
+      <input class="form-control" type="file" name="image" required>
+      <br>
+
+
+      <label style="position: absolute;" for="khata">Khata Certificate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tax Recipt</label><br/>
+
+
+      <input style="position: absolute; width: 250px; float: left;" class="form-control" type="file" name="khata" required>
+      <input style="display: inline-block; width: 250px; float: right;" class="form-control" type="file" name="tax" required>
+      <br><br><br>
+
+        <input type="hidden" name= "username" value="{{user}}" />
+
+      <input class="btn btn-lg btn-primary btn-block" style="cursor: pointer;" type='submit' value='Upload!' />
+
+    </form>
+  </div>
+</div>
+<style>
+
+.wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-signin {
+  max-width: 600px;
+  padding: 30px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 30px;
+  }
+
+  .form-control {
+    position: relative;
+    font-size: 15px;
+    height: auto;
+    padding: 10px;
+    @include box-sizing(border-box);
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+</style>

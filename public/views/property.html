@@ -1,0 +1,45 @@
+<div class="topnav" ng-controller="loginController">
+  <img style="margin-left: 40px; margin-top: 5px" src="images/logo.png" height="60px" width="60px">
+  <a style="margin-top: 5px" ng-show="check()" href ng-click = "logout()"><br><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;LOGOUT</a>
+
+  <label style="margin-right: 750px; position: absolute" href="#/login">&nbsp;&nbsp;&nbsp;&nbsp;MAHIMA - REAL ESTATE MANAGEMENT PORTAL</label>
+</div>
+
+<div>
+  <br>
+  <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><i class="fa fa-arrow-circle-o-right" 
+            aria-hidden="true"></i>&nbsp;&nbsp;Properties of your interests </strong></h5><br>
+
+  <div ng-controller="dashController">
+
+    <div  class="article" ng-repeat="x in property">
+      <p><img style="padding-right: 30px; padding-top: 18px; display: inline-block; float: left;" src="{{x.image}}"  width="200x" height="160px" alt="Image of the property"></p>
+      <span style="float: right; font-size: 16px">Price: <strong>₹&nbsp;{{x.price}}</strong></span>
+      <span>Property ID: {{x.propertyid}}</span><br>
+      Type: <strong>{{x.type}}</strong><br>
+      <span>Location: <strong>{{x.location}}</span></strong>
+      <p>Address:&nbsp;&nbsp;<strong>{{x.address}}</strong></p>
+      <button style="cursor: pointer;" ng-click="interested(x.propertyid)">I am interested in this property</button>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+<style>
+
+.article{
+   box-shadow: 1px 1px 2px #888888;
+   margin-top: 10px;
+   margin-right: 90px;
+   font-family: "Arial", sans-serif;
+   color: #404040;
+   font-weight: 500;
+   margin-left: 250px;
+   width: 900px;
+   padding-left: 50px;
+   padding-right: 50px;
+   letter-spacing: 0.3px;
+   font-size: 15px;
+   display: inline-block;
+}
+</style>

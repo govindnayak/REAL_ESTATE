@@ -1,0 +1,38 @@
+<div class="topnav" ng-controller="loginController">
+  <img style="margin-left: 40px; margin-top: 5px" src="images/logo.png" height="60px" width="60px">
+  <a style="margin-top: 5px" ng-show="check()" href ng-click = "logout()"><br><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;LOGOUT</a>
+  <label style="margin-right: 750px; position: absolute" href="#/login">&nbsp;&nbsp;&nbsp;&nbsp;MAHIMA - REAL ESTATE MANAGEMENT PORTAL</label>
+</div>
+<div class="container" ng-controller="dashController">
+	<br>
+	<div class="row" style="margin-left: 90px">
+
+          <div class="col-md-1-5">
+
+          <h5 style="position: absolute;"><i class="fa fa-arrow-circle-o-right" 
+            aria-hidden="true"></i>&nbsp;&nbsp;Dashboard </h5><br><br><br>
+            <a href="#/upload"><img src="images/sell.png" height="160px" width="160px"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 26px">SELL PROPERTY</span>
+            <br><br><br>
+            <a href="#/property"><img src="images/buy.png" height="160px" width="160px"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 26px">BUY PROPERTY</span>
+
+         </div>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+          <div class="col-md-1-5">
+             <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;
+              <h5 style="display: inline-block;">Welcome! Logged In as:&nbsp;{{user}}</h5><br><br><br>
+
+            <a href="#/notification"><img src="images/notify.png" height="160px" width="160px"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 26px">NOTIFICATIONS</span>
+            <br><br><br>
+            <a href="#/wishlist"><img src="images/wish.png" height="175px" width="175px"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 26px">WISH-LIST</span>
+         </div>
+
+    </div>
+</div>

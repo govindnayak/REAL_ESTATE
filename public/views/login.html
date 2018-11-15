@@ -1,0 +1,99 @@
+<div class="topnav" ng-controller="loginController">
+  <img style="margin-left: 40px; margin-top: 5px" src="images/logo.png" height="60px" width="60px">
+  <a style="margin-top: 5px" ng-show="check()" href ng-click = "logout()"><br><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;LOGOUT</a>
+  <label style="margin-right: 750px; position: absolute" href="#/login">&nbsp;&nbsp;&nbsp;&nbsp;MAHIMA - REAL ESTATE MANAGEMENT PORTAL</label>
+</div>
+
+<div class="container">
+
+  <div class="row" style="padding: 40px">
+
+   <div class="col" style="float:left; width: 50%">
+      <div class="wrapper">
+
+        <div class="row">
+          <div class="col-md-1-5">
+            <img src="images/property.png" height="120px" width="120px">
+         </div>
+
+          <div class="col-md-1-5">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/location.png" height="120px" width="120px">
+         </div>
+
+          <div class="col-md-1-5">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/business.png" height="120px" width="120px">
+         </div>
+       </div>
+       <br><br><br>
+       <div class="row">
+        <h3>SEARCH&nbsp;&nbsp;|&nbsp;&nbsp;LOCATE&nbsp;&nbsp;|&nbsp;&nbsp;BUY&nbsp;&nbsp;|&nbsp;&nbsp;SELL</h3>
+        <br><br><p style="text-align: justify; font-size: 17px">This portal connects potential buyers and sellers of properties from different corners of the world. Users can buy or sell their 
+        properties on this platform and enjoy the ease of doing real-estate business!</p>
+       </div>
+
+      </div>
+   </div>
+
+
+
+   <div class="col" style="float:right; width: 50%;">
+
+
+      <div class="wrapper" ng-controller="loginController">
+        <form class="form-signin" method="post" ng-submit="login()">
+
+          <h5><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;LOGIN</h5></br>
+          <input type="text" class="form-control" name="username" placeholder="Username" ng-model="username" required="" autofocus="" /><br>
+          <input type="password" class="form-control" name="password" placeholder="Password" ng-model="password" required=""/>
+          <br>
+          <input type="radio" name="type" value="user" ng-model="type" checked> User&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="type" value="employee" ng-model="type"> Employee<br>
+          <br>
+          <button class="btn btn-lg btn-primary btn-block" style="cursor: pointer;" type="submit">Login</button>
+          <br>
+          <label>Not registered yet?  <a href="#/register">Register</a></label>
+
+        </form>
+      </div>
+
+   </div>
+
+  </div>
+</div>
+
+
+<div style="clear:both"></div>
+
+
+<style>
+
+.wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-signin {
+  max-width: 400px;
+  padding: 30px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 30px;
+  }
+
+  .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    @include box-sizing(border-box);
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+</style>

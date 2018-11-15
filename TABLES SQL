@@ -1,0 +1,21 @@
+create table users(userid auto primary key, username varchar(50), password varchar(50), name varchar(50), 
+email varchar(20), phone int(11));
+
+create table employee(employeeid int auto primary key, username varchar(50), password varchar(50));
+
+create table verification(documentid int(10), employeeid int(10), status int, foreign key(employeeid) references employee(employeeid), foreign key(documentid) references document(documentid));
+
+create table document(documentid int primary key, type varchar(10), propertyid int, image, foreign key(propertyid) references property(propertyid));
+
+create table property(propertyid int primary key, price int(10), type varchar(20), location varchar(20), address varchar(100), image);
+
+create table wishlist (buyerid int,type varchar(20),rlow int,rhigh int,location varchar(20),
+primary key(buyerid,type),foreign key(buyerid) references user(userid));
+
+create table upload(userid int,propertyid int,primary key(userid,propertyid),
+foreign key(userid) references users(userid),foreign key(propertyid) 
+references property(propertyid));
+
+create table interested(userid int,propertyid int,primary key(userid,propertyid),
+foreign key(userid) references users(userid),foreign key(propertyid) references 
+property(propertyid));
